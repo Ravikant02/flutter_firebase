@@ -4,8 +4,6 @@ import 'package:flutter_with_firebase/screens/user_list.dart';
 import 'firebase_options.dart';
 import 'package:firebase_database/firebase_database.dart';
 
-import 'models/user_model.dart';
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
@@ -42,8 +40,6 @@ class _MyHomePageState extends State<MyHomePage> {
   final textEditingController = TextEditingController();
   final rootName = "Users"; // root or users table
   var retrievedName = '';
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -100,13 +96,6 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: const Text('Next')
           ),
-          // ListView.builder(
-          //     itemCount: users.length,
-          //     itemBuilder: (BuildContext context, int index) {
-          //       return Text(
-          //           users[index].name
-          //       );
-          //     })
         ],
       )
     );
